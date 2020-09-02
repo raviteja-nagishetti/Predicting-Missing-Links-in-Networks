@@ -54,7 +54,7 @@ def Score(a,b):
         if CN(a,b) == 0:
             return (1/Distance(a,b))  
         else:
-            return (1+CN(a,b))/2#(len(set(train_graph[a]))+len(set(train_graph[b])))
+            return (CN(a,b)+Distance(a,b))/(Distance(a,b)+1)
     except:
         return 0
     
